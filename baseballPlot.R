@@ -7,7 +7,7 @@ load_data <- function(path) {
   do.call(rbind, tables)
 }
 
-test<-load_data('~/Baseball')
+test<-load_data('~/GitHub/baseballGameTime')
 
 summarySE(test, measurevar='gameTime', groupvars=c('Year'))
 
@@ -24,3 +24,8 @@ ggplot(test, aes(factor(Year), gameTime))+
 ggplot(test, aes(factor(Home), gameTime))+
   geom_boxplot()+
   facet_wrap('Year', nrow=8)
+
+#box plot of average game time by league
+summarySE(test, measurevar='gameTime', groupvars=c('League'))
+ggplot(test, aes(factor(League), gameTime))+
+  geom_boxplot()
