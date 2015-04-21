@@ -1,4 +1,4 @@
 #ignore .txt and .csv files
 *.txt
-.RData
-.Rhistory
+*.RData
+*.Rhistory
