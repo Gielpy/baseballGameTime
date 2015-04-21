@@ -2,3 +2,4 @@
 *.txt
 *.RData
 *.Rhistory
+*.db
