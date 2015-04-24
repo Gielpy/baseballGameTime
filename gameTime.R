@@ -32,7 +32,7 @@ library(XML)
 # -----------------------------------------------------------
 
 GameTime <- function(fileloc = "./elapsedTime2015.txt",
-                            start.date = "2015-02-10", end.date = "2015-05-01",
+                            start.date = "2015-04-15", end.date = "2015-05-01",
                             URL.base = "http://gd2.mlb.com/components/game/mlb/",
                             game.type = "R",
                             elapsed.Time = "elapsedTime"
