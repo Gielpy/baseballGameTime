@@ -3,6 +3,7 @@ allYears<-subset(allYears, gameTime>'0')
 without2015<-subset(allYears, Year<'2015')
 
 library(ggplot2)
+library(bear)
 
 summarized<-summarySE(allYears, measurevar='gameTime', groupvars=c('Year', 'interleague' ))
 
@@ -51,8 +52,8 @@ ggplot(allYears, aes(x=gameNumber, y=runningAvg, group=Year))+
   theme_classic(base_size=20, base_family="Helvetica")+
   ylab("Average Game Time (minutes)")+
   xlab("Game Number of Season")+
-  xlim(0,300)+
-  scale_y_continuous(limits=c(125,250), breaks=seq(0,300, by=25))
+  xlim(0,600)+
+  scale_y_continuous(limits=c(125,250), breaks=seq(0,600, by=25))
 
 
 
